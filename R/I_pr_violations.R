@@ -48,7 +48,7 @@ fun<-function(n){
 }
 
 #Apply function to indivdual PWSID events
-violations<-lapply(seq(1,nrow(violations)), fun)
+violations<-lapply(seq(1,nrow(water_system)), fun)
 violations<-bind_rows(violations)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -81,7 +81,7 @@ p1<-violations %>%
 p1
 
 #Export
-png("docs/puerto_rico_wq_violations.png", width=3.5, height = 3, units="in", res=150)
+png("docs/puerto_rico_wq_violations.png", width=5.5, height = 3, units="in", res=150)
 p1
 dev.off()
     
