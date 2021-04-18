@@ -66,6 +66,7 @@ p1<-violations %>%
   group_by(year) %>% 
   summarise(count=n()) %>% 
   arrange(year) %>% 
+  filter(year<2020) %>% 
   ggplot(aes(x=year, y=count)) +
     geom_line(lty=2, lwd=1.1) +
     geom_point(pch=21, bg="grey70", col="grey30", cex=3) + 
